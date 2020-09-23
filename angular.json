@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "estudo-github-actions"
+    }
+  },
+  "defaultProject": "estudo-github-actions",
+  "cli": {
+    "analytics": false
+  }
 }
