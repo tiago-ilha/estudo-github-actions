@@ -14,18 +14,27 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 12.8
+    - name: Download Build Source
+      uses: actions/checkout@v1
+      
+    - name: Set Base Enviromnent
       uses: actions/setup-node@v1
       with:
         node-version: 12.8
-    - name: Install dependencies
-      run: npm install
-    - name: Lint
-      run: npm run lint
+        
+    - name: Pre-build
+      run: | 
+        echo "============================= Iniciando Instalação das Dependências ============================="
+        npm install
+        echo "============================= Iniciando Verificação do Lint ============================="
+        npm run lint
+      
     - name: Build
       run: npm run build -- --prod
+      
     - name: Test
       run: |
+        echo "============================= Iniciando Testes Unitários ============================="
         npm run test:ci
+        echo "============================= Iniciando Testes de Integração ============================="
         npm run e2e -- --configuration=ci
