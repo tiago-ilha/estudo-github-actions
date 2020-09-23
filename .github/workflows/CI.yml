@@ -27,5 +27,5 @@ jobs:
       run: npm run build -- --prod
     - name: Test
       run: |
-        ng test:ci
+        npm run test:ci
         npm run e2e -- --configuration=ci
