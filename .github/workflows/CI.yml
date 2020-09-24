@@ -28,7 +28,7 @@ jobs:
         npm run lint
       
     - name: Build
-      run: ng build --prod
+      run: npm run build -- --prod
       
     - name: Test
       run: |
