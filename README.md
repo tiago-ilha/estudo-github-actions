@@ -1,5 +1,7 @@
 # EstudoGithubActions
 
+![CI](https://github.com/tiago-ilha/estudo-github-actions/workflows/CI/badge.svg)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.11.
 
 ## Development server
