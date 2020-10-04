@@ -77,6 +77,10 @@
     "@semantic-release/git"
   ],
   "release": {
+    "branches": [
+      "master",
+      "next"
+    ],
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
