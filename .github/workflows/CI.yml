@@ -28,6 +28,11 @@ jobs:
     
     - name: Unit tests
       run: ng test --browsers ChromeHeadless
+    
+    - name: Semantic release
+      env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          run: npx semantic-release
 
     - name: Publish Artifact
       uses: actions/upload-artifact@v2.1.3
