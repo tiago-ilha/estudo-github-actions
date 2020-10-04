@@ -35,7 +35,7 @@ jobs:
         npm run test:ci
         npm run e2e
         
-    - name: Semantic release
-      env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          run: npx semantic-release
+    #- name: Semantic release
+     # env:
+      #    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+       #   run: npx semantic-release
