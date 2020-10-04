@@ -81,10 +81,6 @@
       "@semantic-release/changelog",
       "@semantic-release/git"
     ],
-    "branch": [
-      "develop",
-      "release",
-      "main"
-    ]
+    "branches": ["master", "next"]
   }
 }
